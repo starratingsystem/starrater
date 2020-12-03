@@ -27,7 +27,7 @@
 	
 	let adres = location.href.split('?')[0].split('#')[0];
 	if (/.*\/[12][90][9012][0-9]\/[0-9][0-9]\/.*\.html/.test(adres)) { // post page
-		let sel = ['.post-title', 'h1', 'h2', 'h3'];
+		let sel = ['.post-body', '.post-title', 'h1', 'h2', 'h3'];
 		let ust = starRatingSystemSettings.postPage;
 		
 		gotowosc(function() {
