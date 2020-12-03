@@ -16,7 +16,13 @@
 	let majn = document.getElementById('main');
 	
 	function gotowosc(f) {
-		/in/.test(document.readyState) ? setTimeout('gotowosc(' + f + ')', 50) : f()
+		if (/in/.test(document.readyState)) {
+			setTimeout(function() {
+				gotowosc(f);
+			}, 50);
+		} else {
+			f();
+		}
 	}
 	
 	let adres = location.href.split('?')[0].split('#')[0];
